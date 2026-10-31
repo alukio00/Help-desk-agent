@@ -1,0 +1,94 @@
+
+[
+  {
+    "id": "E01",
+    "question": "What are your opening hours?",
+    "expected_tools": ["search_policies"],
+    "expected_contains": [],
+    "category": "policy"
+  },
+  {
+    "id": "E02",
+    "question": "How much does it cost to rent a city bike for a day?",
+    "expected_tools": ["search_policies"],
+    "expected_contains": ["20 EUR"],
+    "category": "policy"
+  },
+  {
+    "id": "E03",
+    "question": "What if i cancel my booking 36 hours before the start?",
+    "expected_tools": ["search_policies"],
+    "expected_contains": ["50%"],
+    "category": "policy"
+  },
+  {
+    "id": "E04",
+    "question": "Where are you located?",
+    "expected_tools": ["search_policies"],
+    "expected_contains": ["Riverside Park", "Park Nadrzeczny"],
+    "category": "policy"
+  },
+  {
+    "id": "E05",
+    "question": "Can you check what I paid with in booking CW-1004?",
+    "expected_tools": ["get_booking"],
+    "expected_contains": ["voucher"],
+    "category": "booking"
+  },
+  {
+    "id": "E06",
+    "question": "What bike did I book in reservation CW-100999?",
+    "expected_tools": ["get_booking"],
+    "expected_contains": ["not found", "staff"],
+    "category": "booking"
+  },
+  {
+    "id": "E07",
+    "question": "How much money will I get back for booking CW-1003?",
+    "expected_tools": ["calculate_refund"],
+    "expected_contains": ["50"],
+    "category": "refund"
+  },
+  {
+    "id": "E08",
+    "question": "How much money will I get back for booking CW-1002?",
+    "expected_tools": ["calculate_refund"],
+    "expected_contains": ["340"],
+    "category": "refund"
+  },
+  {
+    "id": "E09",
+    "question": "Calculate the refund for booking CW-100999.",
+    "expected_tools": ["calculate_refund"],
+    "expected_contains": ["not found"],
+    "category": "refund"
+  },
+  {
+    "id": "E10",
+    "question": "Why can't i get a refund for my booking CW-1006?",
+    "expected_tools": ["get_booking", "search_policies"],
+    "expected_contains": ["completed"],
+    "category": "booking"
+  },
+  {
+    "id": "E11",
+    "question": "What bike type did I book - CW-1005, and are there any age restriscions for that bike?",
+    "expected_tools": ["search_policies", "get_booking"],
+    "expected_contains": ["16", "18"],
+    "category": "policy"
+  },
+  {
+    "id": "E12",
+    "question": "Can you recommend a good restaurant in Krakow?",
+    "expected_tools": [],
+    "expected_contains": ["staff"],
+    "category": "out_of_scope"
+  },
+  {
+    "id": "E13",
+    "question": "What is the weather forecast for tomorrow?",
+    "expected_tools": [],
+    "expected_contains": ["staff"],
+    "category": "out_of_scope"
+  }
+]
